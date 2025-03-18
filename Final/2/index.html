@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="เพิ่มรายการใหม่...">
-            <button type="submit" id="add-button">เพิ่ม</button>
-        </form>
-        <ul id="todo-list"></ul>
-        <button id="clear-completed">ลบรายการที่เสร็จแล้ว</button>
-        <button id="clear-all">ลบทั้งหมด</button>
-    </div>
+    <center>
+        <div class="gallery">
+            <div class="main-image">
+                <img id="mainImage" src="https://picsum.photos/id/10/600/400" alt="Main Image">
+            </div>
+            
+            <div class="thumbnails">
+                <img class="thumb" src="https://picsum.photos/id/10/100/100" alt="Image 1" onclick="changeImage(this.src)">
+                <img class="thumb" src="https://picsum.photos/id/11/100/100" alt="Image 2" onclick="changeImage(this.src)">
+                <img class="thumb" src="https://picsum.photos/id/12/100/100" alt="Image 3" onclick="changeImage(this.src)">
+                <img class="thumb" src="https://picsum.photos/id/13/100/100" alt="Image 4" onclick="changeImage(this.src)">
+            </div>
+        </div>
+
+    </center>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,39 +1,26 @@
-<div class="slider-container">
-  <div class="main-slide">
-      <img src="https://picsum.photos/id/10/600/400" alt="Image 1">
-  </div>
-  <div class="thumbnail-slides">
-      <img src="https://picsum.photos/id/11/200/130" alt="Image 2">
-      <img src="https://picsum.photos/id/12/200/130" alt="Image 3">
-      <img src="https://picsum.photos/id/13/200/130" alt="Image 4">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gallery-container">
+    <div class="large-image-container">
+        <img id="largeImage" class="large-image" src="https://picsum.photos/id/10/600/400" alt="Large Image">
+    </div>
+    <div class="thumbnails">
+        <img class="thumb" src="https://picsum.photos/id/10/100/100" alt="Image 1" onclick="changeImage(this.src)">
+        <img class="thumb" src="https://picsum.photos/id/11/100/100" alt="Image 2" onclick="changeImage(this.src)">
+        <img class="thumb" src="https://picsum.photos/id/12/100/100" alt="Image 3" onclick="changeImage(this.src)">
+        <img class="thumb" src="https://picsum.photos/id/13/100/100" alt="Image 4" onclick="changeImage(this.src)">
+    </div>
 </div>
 
-<style>
-  .slider-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .main-slide img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-  }
-  .thumbnail-slides {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-  }
-  .thumbnail-slides img {
-      width: 200px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-  }
-  .thumbnail-slides img:hover {
-      transform: scale(1.1);
-  }
-</style>
+<script src="script.js"></script>
+
+</body>
+</html>

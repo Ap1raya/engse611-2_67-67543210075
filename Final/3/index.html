@@ -1,19 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tab Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <div class="tab-container">
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="tab1">Tab 1</button>
-    <button class="tab-btn" data-tab="tab2">Tab 2</button>
-  </div>
-
-
-  <div class="tab-content">
-    <div id="tab1" class="tab-pane active">
-      <h2>Content for Tab 1</h2>
-      <p>This is the content for the first tab. It displays when Tab 1 is active.</p>
+    <div class="tabs">
+        <button class="tab-button active" data-tab="tab1">To-Do List</button>
+        <button class="tab-button" data-tab="tab2">Image Gallery</button>
     </div>
-    
-    <div id="tab2" class="tab-pane">
-      <h2>Content for Tab 2</h2>
-      <p>This is the content for the second tab. It displays when Tab 2 is active.</p>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+            <div class="todo-container">
+                <h1>To-Do List</h1>
+                <div class="input-container">
+                    <input type="text" id="taskInput" placeholder="Add new task...">
+                    <button id="addTask">Add</button>
+                </div>
+                <ul id="todoList"></ul>
+                <div class="actions">
+                    <button id="clearCompleted">Clear Completed</button>
+                    <button id="clearAll">Clear All</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab2">
+            <div class="gallery-container">
+                <div class="large-image-container">
+                    <img id="largeImage" class="large-image" src="https://picsum.photos/id/10/100/100" alt="Large Image">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumb" src="https://picsum.photos/id/10/100/100" alt="Image 1" onclick="changeImage(this.src)">
+                    <img class="thumb" src="https://picsum.photos/id/11/100/100" alt="Image 2" onclick="changeImage(this.src)">
+                    <img class="thumb" src="https://picsum.photos/id/12/100/100" alt="Image 3" onclick="changeImage(this.src)">
+                    <img class="thumb" src="https://picsum.photos/id/13/100/100" alt="Image 4" onclick="changeImage(this.src)">
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
